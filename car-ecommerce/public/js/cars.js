@@ -8,8 +8,8 @@ fetch('/api/cars')
                 <h3>${car.name}</h3>
                 <p>${car.make} ${car.model}</p>
                 <p>Price: $${car.price}</p>
-                <img src="${car.image}" alt="${car.name}" />
-                <a href="/car/${car.id}">View Details</a>
+                <img src="${car.image}" alt="${car.name}" class="car-image" />
+                <a href="/car/${car._id}">View Details</a>
             `;
             carsContainer.appendChild(carElement);
         });

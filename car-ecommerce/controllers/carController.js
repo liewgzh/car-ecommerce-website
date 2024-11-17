@@ -24,7 +24,8 @@ class CarController {
     }
 
     async createCar(req, res) {
-        const { name, make, model, year, price, image } = req.body;
+        const { name, make, model, year, price } = req.body;
+        const image = req.file ? `/images/${req.file.filename}` : '';
         const newCar = new Car({ name, make, model, year, price, image });
         try {
             await newCar.save();
